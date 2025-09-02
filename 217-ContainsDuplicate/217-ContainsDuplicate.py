@@ -1,14 +1,10 @@
-# Last updated: 8/12/2025, 9:16:26 PM
-class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
-        hashSet = set()
-        for n in nums:
-            if n in hashSet:
+# Last updated: 9/1/2025, 9:08:38 PM
+class Solution(object):
+    def containsDuplicate(self, nums):
+        setmap = set()
+        for num in nums:
+            if num in setmap:
                 return True
-            hashSet.add(n)
+            setmap.add(num)
         return False
 
-
-
-        
-        
