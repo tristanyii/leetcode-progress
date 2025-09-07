@@ -1,4 +1,4 @@
-# Last updated: 9/7/2025, 5:37:11 PM
+# Last updated: 9/7/2025, 5:37:28 PM
 class Solution(object):
     def maxProfit(self, prices):
         l, r = 0, 1
