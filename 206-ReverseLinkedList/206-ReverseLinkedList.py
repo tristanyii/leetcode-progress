@@ -1,11 +1,21 @@
-# Last updated: 8/12/2025, 9:16:27 PM
+# Last updated: 9/13/2025, 6:36:12 PM
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 class Solution(object):
     def reverseList(self, head):
         prev = None
-        current = head
-        while current:
-            next_node = current.next
-            current.next = prev
-            prev = current
-            current = next_node
+        curr = head
+
+        while curr != None:
+            next_node = curr.next
+            curr.next = prev
+            prev = curr
+            curr = next_node
         return prev
+        
+
+        
+        
