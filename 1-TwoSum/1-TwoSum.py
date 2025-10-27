@@ -1,7 +1,9 @@
-# Last updated: 8/22/2025, 7:57:43 PM
+# Last updated: 10/27/2025, 12:08:16 AM
 class Solution(object):
     def twoSum(self, nums, target):
-        for num1 in range(len(nums)):
-            for num2 in range(num1 + 1, len(nums)):
-                if nums[num1] + nums[num2] == target:
-                    return [num1, num2]
+        pair_idx = {}
+
+        for i, num in enumerate(nums):
+            if target - num in pair_idx:
+                return [i, pair_idx[target - num]]
+            pair_idx[num] = i
